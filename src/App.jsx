@@ -1,7 +1,10 @@
-
+import "./App.css"
+import Navbar from "./components/navbar"
 
 export default function App() {
   return (
-      <h1>App component</h1>
+      <>
+        <Navbar />
+      </>
   )
 }
