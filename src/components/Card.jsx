@@ -1,21 +1,21 @@
 import star from "../images/star.png";
-import katie from "../images/katie-zaferes.png";
+// import katie from "../images/katie-zaferes.png";
 
-export default function Card() {
+export default function Card(prop) {
   return (
     <section className="cards">
       <div className="card">
         <div className="image-area">
           <p className="status">SOLD OUT</p>
-          <img className="card-img" src={katie} alt="Image of Katie Zaferes"/>
-        </div>
+          <img className="card-img" src={`src/images/${prop.img}`}/>
+        </div>  
         <span>
           <img className="star" src={star} alt="Star Icon"/>
-          <p>5.0 </p>
-          <p className="rating-gray"> (6) &bull; USA </p>
+          <p>{prop.rating}</p>
+          <p className="rating-gray"> ({prop.reviewCount}) &bull; {prop.country} </p>
         </span>
-        <h2>Life Lessons with Katie Zaferes</h2>
-        <p><strong>From $136 </strong>/ person</p>
+        <h2>{prop.title}</h2>
+        <p><strong>From {prop.price} </strong>/ person</p>
       </div>
     </section>
   );
