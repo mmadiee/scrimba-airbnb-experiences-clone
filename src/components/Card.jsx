@@ -1,4 +1,4 @@
-import star from "../images/star.png";
+import star from "/public/images/star.png";
 // import katie from "../images/katie-zaferes.png";
 
 export default function Card(prop) {
@@ -7,7 +7,7 @@ export default function Card(prop) {
       <div className="card">
         <div className="image-area">
           <p className="status">SOLD OUT</p>
-          <img className="card-img" src={`src/images/${prop.img}`}/>
+          <img className="card-img" src={`/public/images/${prop.img}`}/>
         </div>  
         <span>
           <img className="star" src={star} alt="Star Icon"/>
