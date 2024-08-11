@@ -2,10 +2,16 @@ import star from "/images/star.png";
 // import katie from "../images/katie-zaferes.png";
 
 export default function Card(prop) {
+  let badgeText;
+  if (prop.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (prop.location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
     <div className="card">
       <div className="image-area">
-        <p className="status">SOLD OUT</p>
+        {badgeText && <p className="status">{badgeText}</p>}
         <img className="card-img" src={`/images/${prop.coverImg}`} />
       </div>
       <span>
