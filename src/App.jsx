@@ -9,13 +9,7 @@ export default function App() {
     return (
       <Card
         key={card.id}
-        coverImg={card.coverImg}
-        rating={card.stats.rating}
-        reviewCount={card.stats.reviewCount}
-        location={card.location}
-        price={card.price}
-        title={card.title}
-        openSpots={card.openSpots}
+        card={card}
       />
     );
   });
