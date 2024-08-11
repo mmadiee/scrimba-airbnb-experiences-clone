@@ -41,7 +41,9 @@ nav {
 }
 
 .cards {
-  display: grid;
+  display: flex;
+  gap: 24px;
+  align-items: center;
   justify-content: center;
   margin: 22px 40px 0 40px;
   padding-bottom: 16px;
